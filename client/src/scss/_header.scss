@@ -1,0 +1,30 @@
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+
+  .left {
+    font-size: 1.5rem;
+    font-weight: 700;
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  .right ul {
+    display: flex;
+
+    li {
+      margin-left: 1.5rem;
+      list-style: none;
+    }
+
+    a {
+      text-decoration: none;
+      font-size: 1.2rem;
+      font-weight: 500;
+    }
+  }
+}
