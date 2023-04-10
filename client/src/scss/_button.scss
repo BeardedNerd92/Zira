@@ -1,0 +1,27 @@
+/* Button styling */
+button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* Button hover effect */
+button:hover {
+  background-color: #3e8e41;
+}
+
+/* Button media query for smaller screens */
+@media only screen and (max-width: 600px) {
+  button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}

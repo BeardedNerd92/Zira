@@ -2,11 +2,12 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navigation from "./Navigation";
 import Issues from "../Pages/Issues";
-import Home from "../Pages/Home";
 import Dashboard from "../Pages/DashBoard";
 import Projects from "../Pages/Projects";
 import Users from "../Pages/Users";
 import Settings from "../Pages/Settings";
+import Home from "../pages/Home";
+import Login from "../pages/Login";
 
 export default function Header() {
   return (
@@ -20,6 +21,7 @@ export default function Header() {
           <Route path='/issues' element={<Issues />} />
           <Route path='/users' element={<Users />} />
           <Route path='/settings' element={<Settings />} />
+          <Route path='/login' element={<Login />} />
           <Route path='*' element={<div>404</div>} />
         </Routes>
       </Router>

@@ -1,30 +1,132 @@
+/* Header styling */
+
+header {
+  position: sticky;
+  top: 0;
+}
+
 header nav {
+  background-color: #333;
+  color: white;
+  padding: 8px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 60px;
+}
 
-  .left {
-    font-size: 1.5rem;
-    font-weight: 700;
+/* Logo styling */
+.left {
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
 
-    a {
-      text-decoration: none;
-    }
+.left a {
+  color: white;
+  text-decoration: none;
+}
+
+.menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.menu li {
+  margin: 15px 10px;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease-in-out;
+}
+
+.menu a:hover {
+  color: #4caf50;
+}
+
+/* Hamburger styling */
+.hamburger {
+  display: none;
+}
+
+.hamburger button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.line {
+  display: block;
+  height: 2px;
+  width: 25px;
+  margin: 5px;
+  background-color: white;
+}
+
+.line1 {
+  transform: rotate(45deg) translate(4px, 4px);
+}
+
+.line2 {
+  opacity: 0;
+}
+
+.line3 {
+  transform: rotate(-45deg) translate(4px, -4px);
+}
+
+.login {
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+.button {
+  margin-top: 9px;
+}
+
+@media only screen and (max-width: 600px) {
+  .menu ul {
+    flex-direction: column;
+    align-items: flex-start;
   }
 
-  .right ul {
+  .menu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    z-index: 1;
+  }
+
+  .menu {
+    opacity: 0;
+  }
+
+  .menu.show {
     display: flex;
+    flex-direction: column;
+    opacity: 1;
+  }
 
-    li {
-      margin-left: 1.5rem;
-      list-style: none;
-    }
+  .menu li {
+    margin: 10px;
+  }
 
-    a {
-      text-decoration: none;
-      font-size: 1.2rem;
-      font-weight: 500;
-    }
+  .hamburger {
+    display: block;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .left {
+    padding-top: 10px;
+  }
+}
+
+/* Media query for smaller screens */
