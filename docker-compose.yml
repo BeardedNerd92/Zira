@@ -1,0 +1,12 @@
+services:
+  zira-client:
+    build: ./client
+    container_name: zira-client
+    volumes:
+      - ./client:/app
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+    ports:
+      - 3000:3000
+    stdin_open: true
+    tty: true
